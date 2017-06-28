@@ -5,7 +5,9 @@ var dictionary = [];
 var rectifiedCases = {};
 var smallestWord =  2;
 
-module.exports =  function (document, convention, callback) {
+module.exports =  function (document, convention, smallestWordSize, callback) {
+  smallestWord = smallestWordSize;
+
   var reader = require('./lib/dictionary-reader');
   reader('default', function (err, rows) {
     dictionary =  rows;
@@ -21,7 +23,8 @@ module.exports =  function (document, convention, callback) {
 };
 
 function convert(document, convention) {
- //createIndices(document, convention);
+
+  
 
 
 }
